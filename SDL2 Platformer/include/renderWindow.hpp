@@ -14,7 +14,9 @@ public:
 	void clear();
 	void render(Entity& p_entity);
 	void display();
+	float getXWid();
 private:
+	float xWidth;
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 };
