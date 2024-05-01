@@ -16,8 +16,16 @@ int main(int argv, char* args[]){
 		std::cout << " img ye" << std::endl;
 	}
 
-	RenderWindow window("JumpKillervania Alpha 0.01", 800, 600);
+	RenderWindow window("Cillervania Alpha 0.01", 800, 600);
 
+	// Entity myEntity(0.0f, 0.0f, nullptr);    // doesnt works esli shto
+
+	// for (int i = 0; i < 12; ++i) {
+    // 	p_x += 64.0f;
+    // }
+
+	float getXcount = window.getXWid();
+	cout << window.getXWid() << endl;
 	SDL_Texture* grassTexture = window.loadTexture("res/gfx/ground_grass_1.png");
 
 	vector<Entity> grasses = {
@@ -36,6 +44,12 @@ int main(int argv, char* args[]){
 		Entity (720.f, 540.f, grassTexture),
 		Entity (780.f, 540.f, grassTexture)
 	};
+
+	for (int i = 0; i < getXcount; ++i)
+	{
+		cout << window.getXWid() << endl;
+		// grasses.push_back();
+	}
 
 	bool gameLoop = true;
 	SDL_Event event;
